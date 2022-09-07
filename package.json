@@ -5,6 +5,9 @@
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
+  "simple-git-hooks": {
+    "pre-push": "make lint"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
