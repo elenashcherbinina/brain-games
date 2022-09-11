@@ -4,7 +4,8 @@
   "description": "Brain Games from Hexlet",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "simple-git-hooks": {
     "pre-push": "make lint"
