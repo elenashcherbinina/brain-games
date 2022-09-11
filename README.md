@@ -6,3 +6,7 @@
 ### Демонстрационный проект 'brain-even':
 
 https://asciinema.org/a/el3V4waYMankgIHnyCBv8tdYR
+
+### Демонстрационный проект 'brain-calc':
+
+https://asciinema.org/a/s4FAl8BAx65rXzEPh4PujyYqy
