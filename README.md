@@ -10,3 +10,7 @@ https://asciinema.org/a/el3V4waYMankgIHnyCBv8tdYR
 ### Демонстрационный проект 'brain-calc':
 
 https://asciinema.org/a/s4FAl8BAx65rXzEPh4PujyYqy
+
+### Демонстрационный проект 'brain-gcd':
+
+https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK
