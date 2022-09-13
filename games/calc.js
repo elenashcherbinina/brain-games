@@ -3,10 +3,13 @@
 import {
   sayWelcome,
   greetingUser,
+  getGameRule,
   getQuestion,
   getRandomNumber,
   getAnswer,
-  letCongratulate
+  getPositiveFeedback,
+  getNegativeFeedback,
+  getCongratulation
 } from '../src/index.js';
 
 export default (calcGame) => {
@@ -15,7 +18,7 @@ export default (calcGame) => {
   const userName = greetingUser();
 
   const gameRule = 'What is the result of the expression?';
-  console.log(gameRule);
+  getGameRule(gameRule);
 
   for (let countRightAnswers = 0; countRightAnswers < 3; ) {
     const firstRandomNumber = getRandomNumber();
@@ -23,8 +26,8 @@ export default (calcGame) => {
     const operator = ['+', '-', '*'];
     const randomOperator = operator[Math.floor(Math.random() * 3)];
 
-    const question = `${getQuestion()}${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
-    console.log(question);
+    const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+    getQuestion(question);
 
     const userAnswer = getAnswer();
 
@@ -44,15 +47,14 @@ export default (calcGame) => {
     }
 
     if (Number(userAnswer) === correctAnswer) {
-      console.log('Correct!');
+      getPositiveFeedback();
       countRightAnswers += 1;
     } else {
-      console.log(
-        `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}`
-      );
+      getNegativeFeedback(userAnswer, correctAnswer, userName);
       return false;
     }
   }
-  console.log(`${letCongratulate()}${userName}!`);
+  getCongratulation(userName);
+
   return calcGame;
 };

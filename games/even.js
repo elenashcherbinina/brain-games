@@ -4,46 +4,49 @@
 import {
   sayWelcome,
   greetingUser,
+  getGameRule,
   getQuestion,
   getRandomNumber,
   getAnswer,
-  letCongratulate
+  getPositiveFeedback,
+  getNegativeFeedback,
+  getCongratulation
 } from '../src/index.js';
 
-export default (brainEven) => {
+export default (evenGame) => {
   sayWelcome();
 
   const userName = greetingUser();
 
   const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  console.log(gameRule);
+  getGameRule(gameRule);
 
   for (let countRightAnswers = 0; countRightAnswers < 3; ) {
     const randomNumber = getRandomNumber();
 
-    const question = `${getQuestion()}${randomNumber}`;
-    console.log(question);
+    const question = randomNumber;
+    getQuestion(question);
 
     const userAnswer = getAnswer();
 
     const evenNumber = randomNumber % 2 === 0;
+    let correctAnswer = 'yes';
     if (
-      (evenNumber && userAnswer === 'yes') ||
-      (!evenNumber && userAnswer === 'no')
+      (evenNumber && userAnswer === correctAnswer) ||
+      (!evenNumber && userAnswer !== correctAnswer)
     ) {
-      console.log('Correct!');
+      getPositiveFeedback();
       countRightAnswers += 1;
-    } else if (evenNumber && userAnswer !== 'yes') {
-      const noFeedback = `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${userName}!`;
-      console.log(noFeedback);
+    } else if (evenNumber && userAnswer !== correctAnswer) {
+      getNegativeFeedback(userAnswer, correctAnswer, userName);
       countRightAnswers = 0;
-    } else if (!evenNumber && userAnswer !== 'no') {
-      const yesFeedback = `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${userName}!`;
-      console.log(yesFeedback);
+    } else if (!evenNumber && userAnswer === correctAnswer) {
+      correctAnswer = 'no';
+      getNegativeFeedback(userAnswer, correctAnswer, userName);
       countRightAnswers = 0;
     }
   }
-  console.log(`${letCongratulate()}${userName}!`);
+  getCongratulation(userName);
 
-  return brainEven;
+  return evenGame;
 };
