@@ -14,3 +14,7 @@ https://asciinema.org/a/s4FAl8BAx65rXzEPh4PujyYqy
 ### Демонстрационный проект 'brain-gcd':
 
 https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK
+
+### Демонстрационный проект 'brain-progression':
+
+https://asciinema.org/a/XXM9hPLownAIKAHNEJYTDcSwj
