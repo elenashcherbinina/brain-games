@@ -36,7 +36,7 @@ export const getPositiveFeedback = () => {
 };
 
 export const getNegativeFeedback = (userAnswer, correctAnswer, userName) => {
-  const negativeFeedback = `${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}`;
+  const negativeFeedback = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}`;
   console.log(negativeFeedback);
 };
 
