@@ -18,3 +18,7 @@ https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK
 ### Демонстрационный проект 'brain-progression':
 
 https://asciinema.org/a/XXM9hPLownAIKAHNEJYTDcSwj
+
+### Демонстрационный проект 'brain-prime':
+
+https://asciinema.org/a/6uqkPP5XpfVCT3R5Tyk9DowLr
