@@ -39,11 +39,11 @@ export default (evenGame) => {
       countRightAnswers += 1;
     } else if (evenNumber && userAnswer !== correctAnswer) {
       getNegativeFeedback(userAnswer, correctAnswer, userName);
-      countRightAnswers = 0;
+      return false;
     } else if (!evenNumber && userAnswer === correctAnswer) {
       correctAnswer = 'no';
       getNegativeFeedback(userAnswer, correctAnswer, userName);
-      countRightAnswers = 0;
+      return false;
     }
   }
   getCongratulation(userName);
