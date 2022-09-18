@@ -31,23 +31,23 @@ sudo npm i -g di-brain-games
 
 Run the specific game.
 
-#### 1. Even Number 1
+#### 1. Even Number
 
 ```
 brain-even
 ```
 
-##### Project Demo 'brain-even':
+**Project Demo 'brain-even':**
 
 [![asciicast](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P.svg)](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P)
 
-#### 2. Calculator 2
+#### 2. Calculator
 
 ```
 brain-calc
 ```
 
-### Project Demo 'brain-calc':
+##### Project Demo 'brain-calc':
 
 [![asciicast](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L.svg)](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L)
 
