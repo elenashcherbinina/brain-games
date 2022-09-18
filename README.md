@@ -37,7 +37,7 @@ Run the specific game.
 brain-even
 ```
 
-**Project Demo 'brain-even':**
+Project Demo 'brain-even':
 
 [![asciicast](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P.svg)](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P)
 
@@ -47,18 +47,36 @@ brain-even
 brain-calc
 ```
 
-##### Project Demo 'brain-calc':
+Project Demo 'brain-calc':
 
 [![asciicast](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L.svg)](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L)
 
-### Демонстрационный проект 'brain-gcd':
+#### 3. Finding the Greatest Common Divisor
 
-https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK
+```
+brain-gcd
+```
 
-### Демонстрационный проект 'brain-progression':
+Project Demo 'brain-gcd':
 
-https://asciinema.org/a/XXM9hPLownAIKAHNEJYTDcSwj
+[![asciicast](https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK.svg)](https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK)
 
-### Демонстрационный проект 'brain-prime':
+#### 4. Progression
 
-https://asciinema.org/a/6uqkPP5XpfVCT3R5Tyk9DowLr
+```
+brain-progression
+```
+
+Project Demo 'brain-progression':
+
+[![asciicast](https://asciinema.org/a/IqufHrMoURnXD8SlfFSsvYwSn.svg)](https://asciinema.org/a/IqufHrMoURnXD8SlfFSsvYwSn)
+
+#### 5. Prime Number Definition
+
+```
+brain-prime
+```
+
+Project Demo 'brain-prime':
+
+[![asciicast](https://asciinema.org/a/oQETquGmwn0x02c9JpCa1q2cq.svg)](https://asciinema.org/a/oQETquGmwn0x02c9JpCa1q2cq)
