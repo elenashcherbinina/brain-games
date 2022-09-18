@@ -37,7 +37,7 @@ Run the specific game.
 brain-even
 ```
 
-Project Demo 'brain-even':
+**Project Demo:**
 
 [![asciicast](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P.svg)](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P)
 
@@ -47,7 +47,7 @@ Project Demo 'brain-even':
 brain-calc
 ```
 
-Project Demo 'brain-calc':
+**Project Demo:**
 
 [![asciicast](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L.svg)](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L)
 
@@ -57,7 +57,7 @@ Project Demo 'brain-calc':
 brain-gcd
 ```
 
-Project Demo 'brain-gcd':
+**Project Demo:**
 
 [![asciicast](https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK.svg)](https://asciinema.org/a/C4sAnbkEg5UQgkT23Xq2ihBOK)
 
@@ -67,7 +67,7 @@ Project Demo 'brain-gcd':
 brain-progression
 ```
 
-Project Demo 'brain-progression':
+**Project Demo:**
 
 [![asciicast](https://asciinema.org/a/IqufHrMoURnXD8SlfFSsvYwSn.svg)](https://asciinema.org/a/IqufHrMoURnXD8SlfFSsvYwSn)
 
@@ -77,6 +77,6 @@ Project Demo 'brain-progression':
 brain-prime
 ```
 
-Project Demo 'brain-prime':
+**Project Demo :**
 
 [![asciicast](https://asciinema.org/a/oQETquGmwn0x02c9JpCa1q2cq.svg)](https://asciinema.org/a/oQETquGmwn0x02c9JpCa1q2cq)
