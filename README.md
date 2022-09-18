@@ -7,13 +7,13 @@
 
 Brain Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.
 
-Games:
+#### Games:
 
-Even Number Definition
-Calculator
-Finding the Greatest Common Divisor
-Progression: Finding Missing Numbers in a Number Sequence
-Prime Number Definition
+- Even Number Definition
+- Calculator
+- Finding the Greatest Common Divisor
+- Progression: Finding Missing Numbers in a Number Sequence
+- Prime Number Definition
 
 ### Requirements
 
@@ -27,21 +27,29 @@ Via npm:
 sudo npm i -g di-brain-games
 ```
 
-### Run Games
+### Usage
 
-#### Even Number Definition
+Run the specific game.
+
+#### 1. Even Number 1
 
 ```
 brain-even
 ```
 
-##### Демонстрационный проект 'brain-even':
+##### Project Demo 'brain-even':
 
 [![asciicast](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P.svg)](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P)
 
-### Демонстрационный проект 'brain-calc':
+#### 2. Calculator 2
 
-https://asciinema.org/a/s4FAl8BAx65rXzEPh4PujyYqy
+```
+brain-calc
+```
+
+### Project Demo 'brain-calc':
+
+[![asciicast](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L.svg)](https://asciinema.org/a/M8LStQXIY8Z1lAwC3wrKuZP0L)
 
 ### Демонстрационный проект 'brain-gcd':
 
