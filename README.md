@@ -3,9 +3,41 @@
 [![Actions Status](https://github.com/elenashcherbinina/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/elenashcherbinina/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/dd6d9ca20b9958d26f2f/maintainability)](https://codeclimate.com/github/elenashcherbinina/frontend-project-44/maintainability)
 
-### Демонстрационный проект 'brain-even':
+### Project description
 
-https://asciinema.org/a/el3V4waYMankgIHnyCBv8tdYR
+Brain Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.
+
+Games:
+
+Even Number Definition
+Calculator
+Finding the Greatest Common Divisor
+Progression: Finding Missing Numbers in a Number Sequence
+Prime Number Definition
+
+### Requirements
+
+node.js 12.0+
+
+### Install
+
+Via npm:
+
+```
+sudo npm i -g di-brain-games
+```
+
+### Run Games
+
+#### Even Number Definition
+
+```
+brain-even
+```
+
+##### Демонстрационный проект 'brain-even':
+
+[![asciicast](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P.svg)](https://asciinema.org/a/WsThvx6CTxkLvHkhBO8QfpL3P)
 
 ### Демонстрационный проект 'brain-calc':
 
