@@ -41,5 +41,5 @@ export const getNegativeFeedback = (userAnswer, correctAnswer, userName) => {
 };
 
 export const getCongratulation = (userName) => {
-  console.log(`Congratulations,${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
