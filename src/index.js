@@ -1,45 +1,31 @@
 import readlineSync from 'readline-sync';
 
-export const sayWelcome = () => {
-  const welcome = 'Welcome to the Brain Games!';
-  console.log(welcome);
-};
-
-export const greetingUser = () => {
+const run = (gameRule, getQuestionAndAnswer) => {
+  console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
-  const greeting = `Hello, ${userName}!`;
-  console.log(greeting);
-  return userName;
-};
+  console.log(`Hello, ${userName}!`);
 
-export const getGameRule = (gameRule) => {
   console.log(gameRule);
+
+  for (let countRightAnswers = 1; countRightAnswers <= 3; ) {
+    const question = getQuestionAndAnswer[0];
+    console.log(`Question: ${question}`);
+
+    const userAnswer = readlineSync.question('Your answer: ');
+    const correctAnswer = getQuestionAndAnswer[1];
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+      countRightAnswers += 1;
+    } else {
+      console.log(
+        `${userAnswer} is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
+      );
+      return false;
+    }
+
+    console.log(`Congratulations, ${userName}!`);
+  }
+  return run;
 };
 
-export const getQuestion = (question) => {
-  console.log(`Question: ${question}`);
-};
-
-export const getRandomNumber = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
-  return randomNumber;
-};
-
-export const getAnswer = () => {
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
-export const getPositiveFeedback = () => {
-  const positiveFeedback = 'Correct!';
-  console.log(positiveFeedback);
-};
-
-export const getNegativeFeedback = (userAnswer, correctAnswer, userName) => {
-  const negativeFeedback = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
-  console.log(negativeFeedback);
-};
-
-export const getCongratulation = (userName) => {
-  console.log(`Congratulations, ${userName}!`);
-};
+export default run;
