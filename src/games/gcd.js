@@ -1,16 +1,7 @@
 /* eslint-disable space-in-parens */
 /* eslint-disable comma-dangle */
-import {
-  sayWelcome,
-  greetingUser,
-  getGameRule,
-  getQuestion,
-  getRandomNumber,
-  getAnswer,
-  getPositiveFeedback,
-  getNegativeFeedback,
-  getCongratulation
-} from '../index.js';
+import run from '../index.js';
+import getRandomNumber from '../utils.js';
 
 export const devisorOfNumber = (num) => {
   const devisors = [];
@@ -47,35 +38,20 @@ export const getTheGreatestDevisor = (
   return theGreatesDevisor;
 };
 
-export default (runGcd) => {
-  sayWelcome();
-  const userName = greetingUser();
+export const getQuestionAndAnswer = () => {
+  const firstRandomNumber = getRandomNumber(1, 100);
+  const secondRandomNumber = getRandomNumber(1, 100);
+  const question = `${firstRandomNumber} ${secondRandomNumber}`;
 
+  const correctAnswer = String(
+    getTheGreatestDevisor(firstRandomNumber, secondRandomNumber)
+  );
+  return [question, correctAnswer];
+};
+
+export default (runGcdGame) => {
   const gameRule = 'Find the greatest common divisor of given numbers.';
-  getGameRule(gameRule);
 
-  for (let countRightAnswers = 0; countRightAnswers < 3; ) {
-    const firstRandomNumber = getRandomNumber();
-    const secondRandomNumber = getRandomNumber();
-
-    const question = `${firstRandomNumber} ${secondRandomNumber}`;
-    getQuestion(question);
-
-    const userAnswer = getAnswer();
-
-    const correctAnswer = getTheGreatestDevisor(
-      firstRandomNumber,
-      secondRandomNumber
-    );
-    if (Number(userAnswer) === correctAnswer) {
-      getPositiveFeedback();
-      countRightAnswers += 1;
-    } else {
-      getNegativeFeedback(userAnswer, correctAnswer, userName);
-      return false;
-    }
-  }
-  getCongratulation(userName);
-
-  return runGcd;
+  run(gameRule, getQuestionAndAnswer);
+  return runGcdGame;
 };

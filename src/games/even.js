@@ -14,6 +14,6 @@ export const getQuestionAndAnswer = () => {
 export default (runEvenGame) => {
   const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  run(gameRule, getQuestionAndAnswer());
+  run(gameRule, getQuestionAndAnswer);
   return runEvenGame;
 };
