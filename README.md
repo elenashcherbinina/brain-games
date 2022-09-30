@@ -17,14 +17,14 @@ Brain Games is a set of five console games based on popular mobile brain trainin
 
 ### Requirements
 
-node.js 12.0+
+node.js 13.0+
 
 ### Install
 
 Via npm:
 
 ```
-sudo npm i -g di-brain-games
+npm ci
 ```
 
 ### Usage
