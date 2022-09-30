@@ -1,5 +1,3 @@
-/* eslint-disable space-in-parens */
-/* eslint-disable comma-dangle */
 import run from '../index.js';
 import getRandomNumber from '../utils.js';
 
@@ -13,10 +11,7 @@ export const devisorOfNumber = (num) => {
   return devisors;
 };
 
-export const getTheGreatestDevisor = (
-  firstRandomNumber,
-  secondRandomNumber
-) => {
+export const getTheGreatestDevisor = (firstRandomNumber, secondRandomNumber) => {
   const devisorsOfFirstNumber = devisorOfNumber(firstRandomNumber);
   const devisorsOfSecondNumber = devisorOfNumber(secondRandomNumber);
 
@@ -38,20 +33,17 @@ export const getTheGreatestDevisor = (
   return theGreatesDevisor;
 };
 
-export const getQuestionAndAnswer = () => {
+export const getTask = () => {
   const firstRandomNumber = getRandomNumber(1, 100);
   const secondRandomNumber = getRandomNumber(1, 100);
-  const question = `${firstRandomNumber} ${secondRandomNumber}`;
+  const getQuestion = `${firstRandomNumber} ${secondRandomNumber}`;
 
-  const correctAnswer = String(
-    getTheGreatestDevisor(firstRandomNumber, secondRandomNumber)
-  );
-  return [question, correctAnswer];
+  const getCorrectAnswer = String(getTheGreatestDevisor(firstRandomNumber, secondRandomNumber));
+  return [getQuestion, getCorrectAnswer];
 };
 
-export default (runGcdGame) => {
-  const gameRule = 'Find the greatest common divisor of given numbers.';
-
-  run(gameRule, getQuestionAndAnswer);
-  return runGcdGame;
+const runGcd = () => {
+  const description = 'Find the greatest common divisor of given numbers.';
+  run(description, getTask);
 };
+export default runGcd;

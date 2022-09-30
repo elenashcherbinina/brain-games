@@ -1,10 +1,7 @@
-/* eslint-disable space-in-parens */
-/* eslint-disable comma-dangle */
-/* eslint-disable operator-linebreak */
 import run from '../index.js';
 import getRandomNumber from '../utils.js';
 
-export const getQuestionAndAnswer = () => {
+export const getTask = () => {
   const randomNumber = getRandomNumber(1, 100);
   const randomForProgression = getRandomNumber(1, 5);
   const progressionString = [];
@@ -15,16 +12,16 @@ export const getQuestionAndAnswer = () => {
   }
 
   const randomPlace = getRandomNumber(1, 9);
-  const correctAnswer = String(progressionString[randomPlace]);
+  const getCorrectAnswer = String(progressionString[randomPlace]);
 
   progressionString[randomPlace] = '..';
-  const question = progressionString.join(' ');
+  const getQuestion = progressionString.join(' ');
 
-  return [question, correctAnswer];
+  return [getQuestion, getCorrectAnswer];
 };
 
-export default (runProgressionGame) => {
-  const gameRule = 'What number is missing in the progression?';
-  run(gameRule, getQuestionAndAnswer);
-  return runProgressionGame;
+const runProgression = () => {
+  const description = 'What number is missing in the progression?';
+  run(description, getTask);
 };
+export default runProgression;
