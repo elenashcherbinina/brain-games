@@ -9,9 +9,7 @@ const run = (description, getTask) => {
 
   const roundsCount = 3;
   for (let i = 0; i < roundsCount; i += 1) {
-    const [getQuestion, getCorrectAnswer] = getTask();
-    const question = getQuestion;
-    const correctAnswer = getCorrectAnswer;
+    const [question, correctAnswer] = getTask();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
