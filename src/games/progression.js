@@ -1,27 +1,24 @@
 import run from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, getProgression } from '../utils.js';
 
-export const getTask = () => {
-  const randomNumber = getRandomNumber(1, 100);
-  const randomForProgression = getRandomNumber(1, 5);
-  const progressionString = [];
-  let count = 0;
-  for (let item = randomNumber; count < 10; item += randomForProgression) {
-    progressionString.push(item);
-    count += 1;
-  }
+const description = 'What number is missing in the progression?';
+const minRange = 1;
+const maxRange = 100;
+const minStep = 1;
+const maxStep = 5;
+const minLength = 1;
+const maxLength = 9;
 
-  const randomPlace = getRandomNumber(1, 9);
-  const getCorrectAnswer = String(progressionString[randomPlace]);
+const getTask = () => {
+  const start = getRandomNumber(minRange, maxRange);
+  const step = getRandomNumber(minStep, maxStep);
+  const progression = getProgression(start, step);
+  const missed = getRandomNumber(minLength, maxLength);
+  const correctAnswer = String(progression[missed]);
+  progression[missed] = '..';
+  const question = progression.join(' ');
 
-  progressionString[randomPlace] = '..';
-  const getQuestion = progressionString.join(' ');
-
-  return [getQuestion, getCorrectAnswer];
+  return [question, correctAnswer];
 };
 
-const runProgression = () => {
-  const description = 'What number is missing in the progression?';
-  run(description, getTask);
-};
-export default runProgression;
+export default () => run(description, getTask);

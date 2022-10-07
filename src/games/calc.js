@@ -1,32 +1,36 @@
 import run from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber, getRandomIndex } from '../utils.js';
 
-export const getTask = () => {
-  const firstRandomNumber = getRandomNumber(1, 100);
-  const secondRandomNumber = getRandomNumber(1, 100);
-  const operator = ['+', '-', '*'];
-  const randomOperator = operator[Math.floor(Math.random() * 3)];
-  const getQuestion = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+const description = 'What is the result of the expression?';
+const minRange = 1;
+const maxRange = 10;
+const operators = ['+', '-', '*'];
 
-  let getCorrectAnswer = 0;
-  switch (randomOperator) {
+const getcorrectAnswer = (number1, operator, number2) => {
+  let correctAnswer = 0;
+  switch (operator) {
     case '+':
-      getCorrectAnswer = String(firstRandomNumber + secondRandomNumber);
+      correctAnswer = String(number1 + number2);
       break;
     case '*':
-      getCorrectAnswer = String(firstRandomNumber * secondRandomNumber);
+      correctAnswer = String(number1 * number2);
       break;
     case '-':
-      getCorrectAnswer = String(firstRandomNumber - secondRandomNumber);
+      correctAnswer = String(number1 - number2);
       break;
     default:
-      console.log('No operator');
+      throw new Error(`No operator: '${operator}'`);
   }
-  return [getQuestion, getCorrectAnswer];
+  return correctAnswer;
 };
 
-const runCalc = () => {
-  const description = 'What is the result of the expression?';
-  run(description, getTask);
+const getTask = () => {
+  const number1 = getRandomNumber(minRange, maxRange);
+  const number2 = getRandomNumber(minRange, maxRange);
+  const operator = operators[getRandomIndex(operators)];
+  const question = `${number1} ${operator} ${number2}`;
+  const correctAnswer = getcorrectAnswer(number1, operator, number2);
+  return [question, correctAnswer];
 };
-export default runCalc;
+
+export default () => run(description, getTask);
