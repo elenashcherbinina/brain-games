@@ -6,22 +6,17 @@ const minRange = 1;
 const maxRange = 10;
 const operators = ['+', '-', '*'];
 
-const getcorrectAnswer = (number1, operator, number2) => {
-  let correctAnswer = 0;
+const calculate = (x, y, operator) => {
   switch (operator) {
     case '+':
-      correctAnswer = String(number1 + number2);
-      break;
+      return String(x + y);
     case '*':
-      correctAnswer = String(number1 * number2);
-      break;
+      return String(x * y);
     case '-':
-      correctAnswer = String(number1 - number2);
-      break;
+      return String(x - y);
     default:
       throw new Error(`No operator: '${operator}'`);
   }
-  return correctAnswer;
 };
 
 const getTask = () => {
@@ -29,8 +24,10 @@ const getTask = () => {
   const number2 = getRandomNumber(minRange, maxRange);
   const operator = operators[getRandomIndex(operators)];
   const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = getcorrectAnswer(number1, operator, number2);
+  const correctAnswer = calculate(number1, number2, operator);
   return [question, correctAnswer];
 };
 
-export default () => run(description, getTask);
+export default () => {
+  run(description, getTask);
+};
