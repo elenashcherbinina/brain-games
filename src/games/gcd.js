@@ -47,4 +47,6 @@ const getTask = () => {
   return [question, correctAnswer];
 };
 
-export default () => run(description, getTask);
+export default () => {
+  run(description, getTask);
+};
