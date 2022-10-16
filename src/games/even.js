@@ -5,9 +5,12 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 const minRange = 1;
 const maxRange = 100;
 
+const isEven = (number) => number % 2 === 0;
+
 const getTask = () => {
-  const question = getRandomNumber(minRange, maxRange);
-  const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
+  const number = getRandomNumber(minRange, maxRange);
+  const question = String(`${number}`);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
