@@ -5,20 +5,23 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 const minRange = 1;
 const maxRange = 100;
 
-const getTask = () => {
-  const question = getRandomNumber(minRange, maxRange);
-  const devisors = [];
-  for (let i = 2; i <= question; i += 1) {
-    if (question % i === 0) {
-      devisors.push(i);
+const isPrime = (number) => {
+  if (number <= 1) {
+    return false;
+  }
+  const numberSqrt = Math.sqrt(number);
+  for (let i = 2; i <= numberSqrt; i += 1) {
+    if (number % i === 0) {
+      return false;
     }
   }
-  let correctAnswer;
-  if (devisors.length === 1 && devisors[0] === question) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  return true;
+};
+
+const getTask = () => {
+  const number = getRandomNumber(minRange, maxRange);
+  const question = String(`${number}`);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
