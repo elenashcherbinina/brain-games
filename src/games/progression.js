@@ -9,11 +9,11 @@ const maxStep = 5;
 const limitLength = 10;
 
 const buildProgression = (start, step, length) => {
-  const elements = [];
+  const progression = [];
   for (let i = 1; i <= length; i += 1) {
-    elements.push(start + step * i);
+    progression.push(start + step * i);
   }
-  return elements;
+  return progression;
 };
 
 const getTask = () => {
