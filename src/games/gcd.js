@@ -5,7 +5,7 @@ const description = 'Find the greatest common divisor of given numbers.';
 const minRange = 1;
 const maxRange = 100;
 
-const gcd = (num1, num2) => (num2 === 0 ? Math.abs(num1) : gcd(num2, num1 % num2));
+const gcd = (x, y) => (y === 0 ? Math.abs(x) : gcd(y, x % y));
 
 const getTask = () => {
   const number1 = getRandomNumber(minRange, maxRange);
