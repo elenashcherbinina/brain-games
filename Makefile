@@ -25,3 +25,6 @@ lint:
 publish:
 	npm publish --dry-run
 
+coverageCommand:
+	make report
+
